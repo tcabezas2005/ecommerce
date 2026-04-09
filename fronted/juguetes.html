@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>JUGUETES</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-category="juguetes">
+
+  <nav class="navbar">
+    <div class="logo">🐾 PetShop</div>
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="accesorios.html">Accesorios</a></li>
+      <li><a href="comida.html">Comida</a></li>
+      <li><a href="juguetes.html">Juguetes</a></li>
+    </ul>
+  </nav>
+
+  <h1 class="titulo">Juguetes</h1>
+
+  <div class="search-box">
+    <input type="text" id="search" placeholder="Buscar producto...">
+  </div>
+
+  <div id="productos" class="grid"></div>
+  <button class="btn-add" onclick="abrirModal()">+</button>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+
+      <span class="close" onclick="cerrarModal()">✖</span>
+
+      <h2 id="tituloModal">Agregar producto</h2>
+
+      <form id="formProducto">
+
+        <input id="name" placeholder="Nombre" required>
+        <input id="description" placeholder="Descripción">
+        <input id="price" type="number" step="0.01" placeholder="Precio" required>
+        <input id="discount" type="number" placeholder="Descuento %" min="0" max="100">
+        <input id="stock" type="number" placeholder="Stock">
+        <input id="image_url" placeholder="URL Imagen">
+        <button id="btnGuardar" type="submit">Agregar producto</button>
+        <button type="button" class="btn-cancel" onclick="cerrarModal()">Cancelar</button>
+
+      </form>
+
+    </div>
+  </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
